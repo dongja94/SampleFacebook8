@@ -25,11 +25,11 @@ public class NetworkManager {
     }
 
     Handler mHandler = new Handler(Looper.getMainLooper());
-    public void loginFacebookToken(Context context, String accessToken, final OnResultListener<String> listener) {
+    public void loginFacebookToken(Context context, String accessToken, final String result , final OnResultListener<String> listener) {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                listener.onSuccess("NOTREGISTER");
+                listener.onSuccess(result);
             }
         }, 1000);
     }

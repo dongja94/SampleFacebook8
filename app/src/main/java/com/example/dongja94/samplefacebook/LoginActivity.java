@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 final AccessToken token = AccessToken.getCurrentAccessToken();
-                NetworkManager.getInstance().loginFacebookToken(LoginActivity.this, token.getToken(), new NetworkManager.OnResultListener<String>() {
+                NetworkManager.getInstance().loginFacebookToken(LoginActivity.this, token.getToken(), "NOTREGISTER", new NetworkManager.OnResultListener<String>() {
                     @Override
                     public void onSuccess(String result) {
                         if (result.equals("OK")) {

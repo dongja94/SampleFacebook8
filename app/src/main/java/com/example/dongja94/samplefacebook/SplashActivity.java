@@ -52,7 +52,7 @@ public class SplashActivity extends AppCompatActivity {
                     AccessToken token = AccessToken.getCurrentAccessToken();
                     if (token != null) {
                         if (token.getUserId().equals(id)) {
-                            NetworkManager.getInstance().loginFacebookToken(SplashActivity.this, token.getToken(), new NetworkManager.OnResultListener<String>() {
+                            NetworkManager.getInstance().loginFacebookToken(SplashActivity.this, token.getToken(),"OK", new NetworkManager.OnResultListener<String>() {
                                 @Override
                                 public void onSuccess(String result) {
                                     if (result.equals("OK")) {
